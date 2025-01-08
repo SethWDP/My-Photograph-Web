@@ -5,6 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  /* outline: 2px solid blue; */
 }
 
 :root {
@@ -38,10 +39,7 @@ header nav .container-fluid img {
 /* Home */
 .main-home {
   background-color: var(--bg4-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
+  min-height: 80vh;
 }
 .right button {
   background: none;
@@ -110,8 +108,8 @@ footer {
 }
 @media (min-width: 1200px) {
   .left img {
-    width: 46rem;
-    height: 46rem;
+    width: 50rem;
+    height: 50rem;
     object-fit: cover;
   }
 }
@@ -128,38 +126,54 @@ footer {
   }
 }
 
-@media (max-width: 767.98px) {
+@media screen and (orientation: portrait) and (max-width: 767.98px) {
   .main-home {
-    height: 80vh;
+    min-height: 100vh;
   }
-  .main-about {
-    height: auto;
+
+  .img-container img {
+    width: 100%;
+    max-width: 400px;
   }
-  .about-pic {
-    height: 45vh;
-    /* margin-bottom: 1rem; */
-  }
-  .about-img {
-    height: auto;
-  }
-  .about-txt {
-    height: auto;
-    min-height: 30vh;
-  }
-  .about-txt h1 {
+
+  h1 {
     font-size: 2rem;
   }
-  .about-txt p {
-    width: 100% !important;
-  }
-  .portrait {
-    margin-top: 10%;
-    height: auto;
-  }
-  .p-txt {
+
+  p {
     font-size: 1rem;
-    text-align: center;
   }
+}
+/* .main-home {
+    height: 80vh;
+  } */
+.main-about {
+  height: auto;
+}
+.about-pic {
+  height: 45vh;
+  /* margin-bottom: 1rem; */
+}
+.about-img {
+  height: auto;
+}
+.about-txt {
+  height: auto;
+  min-height: 30vh;
+}
+.about-txt h1 {
+  font-size: 2rem;
+}
+.about-txt p {
+  width: 100% !important;
+}
+.portrait {
+  margin-top: 10%;
+  height: auto;
+}
+.p-txt {
+  font-size: 1rem;
+  text-align: center;
 }
 @media (max-width: 575.98px) {
   .about-img {
